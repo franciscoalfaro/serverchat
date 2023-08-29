@@ -37,7 +37,7 @@ class Sockets {
 
             })
 
-            socket.on('crear-banda', (name)=>{
+            socket.on('crear-banda', ({name})=>{
                 this.bandList.addBand(name)
                 this.io.emit( 'current-band' , this.bandList.getBand() );
 
